@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  mongodb:
+    image: mongo:4.1.6
+    ports:
+      - "27017:27017"
+    restart: always
+    container_name: mongo-4.1.6
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 8VvvQ8SpHvctIR2G
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "3"
